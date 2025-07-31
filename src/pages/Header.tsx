@@ -10,7 +10,7 @@ export default function Header() {
                 <p className='font-script text-3xl text-amber-300'>VinSpec</p>
             </div>
 
-            <div className='flex gap-5'>
+            <div className='flex gap-5 text-lg'>
                 <Link to='/'>Home</Link>
                 <Link to='/quote'>Get a quote</Link>
                 <Link to='/contacts'>Contacts</Link>
