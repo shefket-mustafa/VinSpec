@@ -7,7 +7,7 @@ export default function HeroSection1() {
         // Hero section 1 
         <div className="bg-cyan-100 flex">
         {/* // Left side content */}
-        <div className="flex w-1/2 h-screen gap-7 px-10 md:px-25 py-15  flex-col">
+        <div className="flex md:w-1/2 h-screen gap-7 px-10 md:px-25 py-15  flex-col">
             <h1 className="text-3xl md:text-5xl font-bold w-80 md:w-140">
             Discover the history of your current or future vehicle.
             </h1>
@@ -83,7 +83,7 @@ export default function HeroSection1() {
 
             {/* Right Side Image */}
             <div className=
-            "bg-[url('https://miro.medium.com/v2/resize:fit:1250/format:webp/1*QDm2-yzHbpFw6JF_xvdcgg.jpeg')] w-full md:w-1/3 bg-no-repeat bg-center md:ml-20 justify-center items-center bg-contain">
+            "bg-[url('https://miro.medium.com/v2/resize:fit:1250/format:webp/1*QDm2-yzHbpFw6JF_xvdcgg.jpeg')] hidden md:flex w-full md:w-1/3 bg-no-repeat bg-center md:ml-20 items-center bg-contain">
                 
             </div>
         </div>
