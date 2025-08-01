@@ -5,14 +5,14 @@ export default function HeroSection1() {
     return(
 
         // Hero section 1 
-        <div className="bg-cyan-100 flex">
+        <div className="bg-cyan-100 md:flex">
         {/* // Left side content */}
-        <div className="flex md:w-1/2 h-screen gap-7 px-10 md:px-25 py-15  flex-col">
-            <h1 className="text-3xl md:text-5xl font-bold w-80 md:w-140">
+        <div className="flex md:w-1/2 md:h-screen gap-7 px-10 md:px-25 py-15  flex-col">
+            <h1 className="text-xl md:text-5xl font-bold md:w-140">
             Discover the history of your current or future vehicle.
             </h1>
 
-            <h3 className="w-80 md:w-120 text-lg">
+            <h3 className="md:w-120 text-lg">
             Request a detailed report to avoid bad deals, sell faster, or ensure your vehicle is safe and reliable.
             </h3>
 
@@ -38,13 +38,7 @@ export default function HeroSection1() {
 
             <div>
                 <p className="font-bold py-5">With carVertical, you can access information about:</p>
-                <ul className="grid grid-cols-3 gap-5">
-                    <li>
-                        <div className="flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" data-slot="icon" className="w-5 h-5 text-blue shrink-0"><path fill="currentColor" fill-rule="evenodd" d="M20.605 6.524a.8.8 0 0 0-1.21-1.048L9.6 16.779l-4.995-5.764a.8.8 0 1 0-1.21 1.047l5.6 6.462a.8.8 0 0 0 1.21 0l10.4-12Z" clip-rule="evenodd"></path></svg>
-                        Recorded images
-                        </div>
-                        </li>
+                <ul className="grid grid-cols-2 md:grid-cols-3 gap-5">
                         <li>
                         <div className="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" data-slot="icon" className="w-5 h-5 text-blue shrink-0"><path fill="currentColor" fill-rule="evenodd" d="M20.605 6.524a.8.8 0 0 0-1.21-1.048L9.6 16.779l-4.995-5.764a.8.8 0 1 0-1.21 1.047l5.6 6.462a.8.8 0 0 0 1.21 0l10.4-12Z" clip-rule="evenodd"></path></svg>
@@ -67,6 +61,12 @@ export default function HeroSection1() {
                         <div className="flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" data-slot="icon" className="w-5 h-5 text-blue shrink-0"><path fill="currentColor" fill-rule="evenodd" d="M20.605 6.524a.8.8 0 0 0-1.21-1.048L9.6 16.779l-4.995-5.764a.8.8 0 1 0-1.21 1.047l5.6 6.462a.8.8 0 0 0 1.21 0l10.4-12Z" clip-rule="evenodd"></path></svg>
                         Safety Records
+                        </div>
+                        </li>
+                        <li>
+                        <div className="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" data-slot="icon" className="w-5 h-5 text-blue shrink-0"><path fill="currentColor" fill-rule="evenodd" d="M20.605 6.524a.8.8 0 0 0-1.21-1.048L9.6 16.779l-4.995-5.764a.8.8 0 1 0-1.21 1.047l5.6 6.462a.8.8 0 0 0 1.21 0l10.4-12Z" clip-rule="evenodd"></path></svg>
+                        Recorded images
                         </div>
                         </li>
                         <li>
