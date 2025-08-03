@@ -1,7 +1,7 @@
 export default function HeroBanner1() {
   return (
     <div className="flex flex-col md:flex-row gap-10 h-20 items-center px-10 md:px-25">
-      <div className="hidden md:flex items-center gap-5">
+      <div className=" flex items-center md:justify-center gap-5">
         {/* people icons image */}
         <div className="bg-[url('https://www.carvertical.com/_next/image?url=%2F_next%2Fstatic%2Fimages%2Ftrustpilot-avatars-clean-2b953ad6a455f9af605004da6f120b83.png&w=256&q=75')] h-20 w-20 bg-center bg-contain bg-no-repeat"></div>
 
