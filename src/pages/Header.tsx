@@ -11,7 +11,7 @@ export default function Header() {
     };
 
     return(
-        <div className="relative h-15 px-10 font-medium flex justify-between items-center">
+        <div className="sticky top-0 z-50 bg-white h-15 px-10 font-medium flex justify-between items-center">
             
             <div className='flex items-center gap-5'>
                 {/* Logo */}

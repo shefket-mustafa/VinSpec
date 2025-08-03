@@ -1,5 +1,7 @@
+import CustomerReviews from "./components/banners/CustomerReviews"
 import HeroBanner1 from "./components/banners/Hero-banner1"
 import HeroBanner2 from "./components/banners/Hero-banner2"
+import HeroBanner3 from "./components/banners/Hero-banner3"
 import Header from "./pages/Header"
 import HeroSection1 from "./pages/HeroSection1"
 
@@ -12,6 +14,8 @@ function App() {
   <HeroSection1 />
   <HeroBanner1 />
   <HeroBanner2 />
+  <HeroBanner3 />
+  <CustomerReviews />
   </>
   )
 }
