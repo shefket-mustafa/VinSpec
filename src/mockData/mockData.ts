@@ -40,4 +40,3 @@ export const bannerData = {
     {customer : {message : 'Here is my experience with VinSpec. I went to check a car yesterday that was on 63 000km i liked it very much and i was about to buy it but my wife made me get a check from these guys first and voala - real kilometers were 457 000.',
     customer: "Trump", id: '3'}}
 ]
-  
