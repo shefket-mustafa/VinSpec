@@ -1,39 +1,10 @@
 import { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { bannerData } from "../../mockData/mockData";
 
 export default function HeroBanner2() {
 
-    const bannerData = {
-        images: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fphotos-en.png&w=1080&q=100',
-          text: 'Knowing what the vehicle looked like in the past is very important for understanding its history and identifying any damaged or weak spots.',
-        },
-        damages: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fdamage-en.png&w=1080&q=100',
-          text: 'No one wants a vehicle with hidden damages. This could lead to overpaying or safety issues on the road.',
-        },
-        odometer: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fmileage-en.png&w=1080&q=100',
-          text: 'Odometer fraud is much more common than you might think. Not only are you overpaying for the vehicle, but you could also end up with a huge repair bill.',
-        },
-        specifications: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fspecifications-en.png&w=1080&q=100',
-          text: 'The specifications and equipment provided by the seller may not always match the actual facts. Always compare them when evaluating vehicles.',
-        },
-        marketValue: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fvaluation-en.png&w=1080&q=100',
-          text: 'Don’t overestimate when buying or selling a vehicle. Compare the average price of the inspected car with similar vehicles of the same model and year.',
-        },
-        safety: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fsafety-en.png&w=1080&q=100',
-          text: 'Manufacturers usually issue safety recalls to fix harmful defects. Make sure your vehicle has no such issues before hitting the road, and check its overall safety rating.',
-        },
-        disaster: {
-          url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fnatural-disasters-en.png&w=1080&q=100',
-          text: 'Make sure your vehicle hasn’t been located in an area affected by a natural disaster (such as a flood, fire, volcanic eruption, etc.) and hasn’t sustained specific damage as a result.',
-        }
-      };
    
 
     const [bannerUrl, setBannerUrl] = useState(bannerData.images);
@@ -70,7 +41,6 @@ export default function HeroBanner2() {
 
     </div>
 
-
         {/* Second part of banner */}
     <div className="md:px-25 ">
         {/* Image buttons */}
@@ -84,7 +54,7 @@ export default function HeroBanner2() {
             <button onClick={() => bannerUrlHandler('disaster')} className="border-1 border-gray-300 cursor-pointer hover:bg-gray-300 transform transition  px-3 py-1 rounded-2xl">Natural Disasters</button>
         </div>
 
-        <div className="bg-cyan-50 flex flex-col md:flex-row justify-center items-center relative">
+        <div className="bg-cyan-50 flex flex-col rounded-lg md:flex-row justify-center items-center relative">
   {/* Image with text */}
   <div className="w-full md:w-1/2 h-96 bg-no-repeat bg-center bg-contain" style={{ backgroundImage: `url(${bannerUrl.url})` }}></div>
 
@@ -107,7 +77,6 @@ export default function HeroBanner2() {
   <div className="md:w-1/2 flex justify-center items-center px-4">
     <p className="font-light max-w-80 py-10 text-center md:text-left">{bannerUrl.text}</p>
   </div>
-
  
 </div>
 </div>
