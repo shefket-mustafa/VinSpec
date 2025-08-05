@@ -22,11 +22,11 @@ export default function Header() {
 
             {/* md+ menu */}
             <div className='hidden md:flex gap-5 text-lg'>
-                <Link to='/'>Home</Link>
-                <Link to='/services'>Services</Link>
-                <Link to='/contacts'>Contacts</Link>
-                <Link to='/about'>About us</Link>
-                <Link to='/qa'>Q&A</Link>
+                <Link to='/'>test1</Link>
+                <Link to='/services'>test1</Link>
+                <Link to='/contacts'>test1</Link>
+                <Link to='/about'>test1</Link>
+                <Link to='/qa'>test1&test1</Link>
             </div>
 
             {/* Burger Icon */}
