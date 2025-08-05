@@ -45,24 +45,24 @@ export default function Footer() {
           <h2 className="text-white font-semibold mb-3">Support</h2>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/faq" className="hover:underline">
+              <Link to="/faq" className="hover:underline">
                 FAQ
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/terms" className="hover:underline">
+              <Link to="/terms" className="hover:underline">
                 Terms of Use
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/privacy" className="hover:underline">
+              <Link to="/privacy" className="hover:underline">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/support" className="hover:underline">
+              <Link to="/support" className="hover:underline">
                 Customer Support
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

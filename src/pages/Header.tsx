@@ -23,10 +23,10 @@ export default function Header() {
             {/* md+ menu */}
             <div className='hidden md:flex gap-5 text-lg'>
                 <Link to='/'>Home</Link>
-                <Link to='/quote'>Get a quote</Link>
+                <Link to='/services'>Services</Link>
                 <Link to='/contacts'>Contacts</Link>
                 <Link to='/about'>About us</Link>
-                <Link to='/quote'>Q&A</Link>
+                <Link to='/qa'>Q&A</Link>
             </div>
 
             {/* Burger Icon */}
@@ -38,10 +38,10 @@ export default function Header() {
                 left-0 flex flex-col p-3 py-5 px-3 bg-white/97 backdrop:-blur-sm shadow-md border-gray-200 rounded-md'>
                 <Link onClick={toggleBurger} to='/'>My Profile</Link>
                 <Link onClick={toggleBurger} to='/'>Home</Link>
-                <Link onClick={toggleBurger} to='/quote'>Get a quote</Link>
+                <Link onClick={toggleBurger} to='/services'>Services</Link>
                 <Link onClick={toggleBurger} to='/contacts'>Contacts</Link>
                 <Link onClick={toggleBurger} to='/about'>About us</Link>
-                <Link onClick={toggleBurger} to='/quote'>Q&A</Link>
+                <Link onClick={toggleBurger} to='/qa'>Q&A</Link>
                 </div>
             )}
 
