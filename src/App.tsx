@@ -8,6 +8,7 @@ import About from "./pages/About"
 import FAQ from "./pages/FAQ"
 import VinCheck from "./pages/VinCheck"
 import ScrollOnTop from "./components/ScrollOnTop"
+import ErrorPage from "./pages/ErrorPage"
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
   <Route path="/vin-check/:vinUrl" element={<VinCheck />} />
 
 
-  <Route path="*" element={<VinCheck />} />
+  <Route path="*" element={<ErrorPage />} />
   
   </Routes>
 
