@@ -10,6 +10,7 @@ import VinCheck from "./pages/VinCheck"
 import ScrollOnTop from "./components/ScrollOnTop"
 import ErrorPage from "./pages/ErrorPage"
 import InvalidVin from "./pages/InvalidVin"
+import RefundPolicy from "./pages/RefundPolicy"
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   <Route path="/qa" element={<FAQ />} />
   <Route path="/vin-check/:vinUrl" element={<VinCheck />} />
   <Route path="/invalid-vin" element={<InvalidVin />} />
+  <Route path="/refund-policy" element={<RefundPolicy />} />
 
 
   <Route path="*" element={<ErrorPage />} />
