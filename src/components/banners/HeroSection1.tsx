@@ -25,6 +25,7 @@ export default function HeroSection1() {
       alert("Invalid VIN. Must be 17 characters, no I/O/Q.");
       return;
     }
+    
     navigate(`/vin-check/${encodeURIComponent(cleanedVin)}`);
   };
 
