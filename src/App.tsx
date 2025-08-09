@@ -6,12 +6,17 @@ import Services from "./pages/Services"
 import Contacts from "./pages/Contacts"
 import About from "./pages/About"
 import FAQ from "./pages/FAQ"
+import VinCheck from "./pages/VinCheck"
+import ScrollOnTop from "./components/ScrollOnTop"
 
 
 function App() {
 
+  
+
   return (
     <>
+    <ScrollOnTop />
   <Header/>
 
 <Routes>
@@ -20,6 +25,10 @@ function App() {
   <Route path="/contacts" element={<Contacts />} />
   <Route path="/about" element={<About />} />
   <Route path="/qa" element={<FAQ />} />
+  <Route path="/vin-check/:vinUrl" element={<VinCheck />} />
+
+
+  <Route path="*" element={<VinCheck />} />
   
   </Routes>
 
