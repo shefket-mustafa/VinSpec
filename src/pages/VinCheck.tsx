@@ -1,5 +1,5 @@
 // src/pages/VinCheck.tsx
-import {  useParams } from "react-router";
+import {  useNavigate, useParams } from "react-router";
 import { useEffect, useMemo, useState } from "react";
 import InfoCard from "../components/InfoCard";
 
@@ -18,20 +18,35 @@ interface CarData {
 
 export default function VinCheck() {
   const {vinUrl} = useParams();
-
+const navigate = useNavigate();
   const cleanedVin = useMemo(() => vinUrl ? vinUrl.trim().toUpperCase() : "", [vinUrl]);
-
   const [carData, setCarData] = useState<CarData | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const navigateToInvalidVin = () => {
+    navigate('/invalid-vin', {replace: true})
+  }
 
   useEffect(() => {
+    const controller = new AbortController();
   
     const fetchCarData = async () => {
       try {
+        setLoading(true);
+        setCarData(null);
+
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate delay
+
         const response = await fetch(
-          `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/${cleanedVin}?format=json`
+          `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/${cleanedVin}?format=json`, {signal: controller.signal}
         );
         const data = await response.json();
         const result = data.Results?.[0];
+
+        if(!result || !result.Make || !result.Make.trim()){
+            navigateToInvalidVin()
+            return;
+        };
   
         if (result) {
           const mappedData: CarData = {
@@ -48,48 +63,61 @@ export default function VinCheck() {
           };
           setCarData(mappedData);
         }
-      } catch (err) {
-        console.log(err);
+      } catch (e) {
+        // navigate("/invalid-vin", {replace: true})
+        //TODO ALERT WITH A TOAST
+        console.log(e);
+        
+      } finally {
+        setLoading(false)
       }
     };
   
     fetchCarData();
-  }, [cleanedVin]);
+
+    return () => controller.abort()
+  }, [cleanedVin, navigate]);
   
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="min-h-screen max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">
         VIN Details - {cleanedVin}
       </h1>
 
+          {/* Loading spinner */}
+      {loading && (
+        <div className="flex items-center py-20 justify-center gap-3 text-gray-600">
+          <svg className="animate-spin h-10 w-10" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" opacity="0.25" />
+            <path d="M22 12a10 10 0 0 1-10 10" fill="none" stroke="currentColor" strokeWidth="4" />
+          </svg>
+          <span>Fetching VIN info…</span>
+        </div>
+      )}
 
       
+        {/* Only render content when we have data and not loading */}
+      {!loading && carData && (
         <div className="space-y-8">
-          {/* Summary cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <InfoCard label="Make" value={carData?.Make} />
-            <InfoCard label="Model" value={carData?.Model} />
-            <InfoCard label="Model Year" value={carData?.ModelYear} />
-            <InfoCard label="Trim" value={carData?.Trim} />
-            <InfoCard
-              label="Engine"
-              value={
-                carData?.EngineModel || carData?.EngineConfiguration
-              }
-            />
-            <InfoCard label="Body Class" value={carData?.BodyClass} />
-            <InfoCard label="Plant Country" value={carData?.PlantCountry} />
-            <InfoCard label="Vehicle Type" value={carData?.VehicleType} />
-            <InfoCard
-              label="Manufacturer"
-              value={carData?.ManufacturerName}
-            />
+            <InfoCard label="Make" value={carData.Make} />
+            <InfoCard label="Model" value={carData.Model} />
+            <InfoCard label="Model Year" value={carData.ModelYear} />
+            <InfoCard label="Trim" value={carData.Trim} />
+            <InfoCard label="Engine" value={carData.EngineModel || carData.EngineConfiguration} />
+            <InfoCard label="Body Class" value={carData.BodyClass} />
+            <InfoCard label="Plant Country" value={carData.PlantCountry} />
+            <InfoCard label="Vehicle Type" value={carData.VehicleType} />
+            <InfoCard label="Manufacturer" value={carData.ManufacturerName} />
           </div>
+
+        </div>
+      )}
 
           {/* Full table */}
           {carData && (
-            <details className="bg-gray-50 rounded-md p-4">
+            <details className="bg-gray-50 rounded-md p-4" open>
             <summary className="cursor-pointer font-medium">
               Show all decoded fields
             </summary>
@@ -113,7 +141,6 @@ export default function VinCheck() {
           </details>
       )}
         </div>
-    </div>
   );
 }
 
