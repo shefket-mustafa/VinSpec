@@ -3,22 +3,24 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next'
 
 // VIN: 17 chars, letters/digits except I, O, Q.
 const vinRegex = /^[A-HJ-NPR-Z0-9]{17}$/;
 
 const schema = yup.object({
   vin: yup
-    .string()
-    .required("VIN is required")
-    .transform((v) => (v || "").trim().toUpperCase())
-    .matches(vinRegex, "Invalid VIN. Must be 17 characters, no I/O/Q."),
+  .string()
+  .required("VIN is required")
+  .transform((v) => (v || "").trim().toUpperCase())
+  .matches(vinRegex, "Invalid VIN. Must be 17 characters, no I/O/Q."),
 });
 
 type FormValues = yup.InferType<typeof schema>;
 
 export default function HeroSection1() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const [noVin, setNoVin] = useState(false);
 
@@ -45,17 +47,18 @@ export default function HeroSection1() {
     navigate(`/vin-check/${cleanedVin}`);
   };
 
+  const checkItems = t("heroSection1.weCheck", { returnObjects: true }) as string[];
+
   return (
     <div className="bg-cyan-100 md:flex">
       {/* Left */}
       <div className="flex md:w-1/2 md:min-h-screen gap-7 px-10 md:px-25 py-20 flex-col">
         <h1 className="text-xl md:text-5xl font-bold md:w-140">
-          Discover the history of your current or future vehicle.
+          {t("heroSection1.title")}
         </h1>
 
         <h3 className="md:w-120 text-lg">
-          Request a detailed report to avoid bad deals, sell faster, or ensure
-          your vehicle is safe and reliable.
+        {t("heroSection1.subtitle")}
         </h3>
 
         <form
@@ -66,7 +69,7 @@ export default function HeroSection1() {
           <div className="flex-1">
             <input
               type="text"
-              placeholder="VIN Number"
+              placeholder= {t("heroSection1.form.placeholder")}
               maxLength={17}
               className="w-full outline-none py-auto bg-transparent uppercase"
               aria-invalid={!!errors.vin || undefined}
@@ -84,7 +87,7 @@ export default function HeroSection1() {
             disabled={isSubmitting}
             className="bg-amber-300 py-2 px-6 cursor-pointer font-bold rounded-3xl disabled:opacity-60"
           >
-            Check
+            {t("heroSection1.form.submit")}
           </button>
         </form>
 
@@ -92,20 +95,14 @@ export default function HeroSection1() {
         <button
           onClick={noVinHandler}
           className="hidden md:flex w-full items-center justify-center border hover:bg-black hover:text-white px-6 py-2 rounded-3xl cursor-pointer">
-          I do not have a VIN
+          {t("heroSection1.form.noVin")}
         </button>
 
         {/*  “We check” list  */}
         <ul className="space-y-2 grid grid-cols-2 md:grid-cols-3">
-          {[
-            "Accident history",
-            "Ownership records",
-            "Odometer readings",
-            "Title issues",
-            "Manufacturer recalls",
-            "Vehicle specifications",
-          ].map((item) => (
-            <li key={item} className="flex items-center gap-2">
+          {checkItems
+          .map((item) => (
+            <li className="flex items-center gap-2">
               <svg
                 className="w-5 h-5 text-green-600 flex-shrink-0"
                 fill="none"

@@ -1,11 +1,40 @@
 {
-    "brand": "VinSpec",
-    "home": "Home",
-    "services": "Services",
-    "contacts": "Contacts",
-    "about": "About",
-    "aboutUs": "About us",
-    "qa": "Q&A",
-    "languageShortBG": "BG",
-    "languageShortEN": "EN"
+    "header": {
+      "brand": "VinSpec",
+      "nav": {
+        "home": "Home",
+        "services": "Services",
+        "contacts": "Contacts",
+        "about": "About",
+        "aboutUs": "About us",
+        "qa": "Q&A"
+      },
+      "language": {
+        "shortBG": "BG",
+        "shortEN": "EN"
+      }
+    },
+    "heroSection1": {
+      "title": "Discover the history of your current or future vehicle.",
+      "subtitle": "Request a detailed report to avoid bad deals, sell faster, or ensure your vehicle is safe and reliable.",
+      "form": {
+        "placeholder": "VIN Number",
+        "submit": "Check",
+        "noVin": "I do not have a VIN",
+        "alt": "Car inspection illustration",
+        "validation": {
+          "vinRequired": "VIN is required",
+          "vinInvalid": "Invalid VIN. Must be 17 characters, no I/O/Q."
+        }
+      },
+      "weCheck": [
+        "Accident history",
+        "Ownership records",
+        "Odometer readings",
+        "Title issues",
+        "Manufacturer recalls",
+        "Vehicle specifications"
+      ]
+    }
   }
+  
