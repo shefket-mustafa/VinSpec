@@ -1,11 +1,21 @@
+
 import { Link, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
-type FormValues = {
-  vin: string;
-};
+// VIN: 17 chars, letters/digits except I, O, Q.
+const vinRegex = /^[A-HJ-NPR-Z0-9]{17}$/;
 
-const vinRegex = /^[A-HJ-NPR-Z0-9]{17}$/i; // 17 chars, no I/O/Q
+const schema = yup.object({
+  vin: yup
+    .string()
+    .required("VIN is required")
+    .transform((v) => (v || "").trim().toUpperCase())
+    .matches(vinRegex, "Invalid VIN. Must be 17 characters, no I/O/Q."),
+});
+
+type FormValues = yup.InferType<typeof schema>;
 
 export default function HeroSection1() {
   const navigate = useNavigate();
@@ -16,23 +26,21 @@ export default function HeroSection1() {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     mode: "onSubmit",
+    resolver: yupResolver(schema),
+    defaultValues: { vin: "" },
   });
 
+
   const onSubmit = ({ vin }: FormValues) => {
-    const cleanedVin = vin.trim().toUpperCase();
-    if (!vinRegex.test(cleanedVin)) {
-      // TODO replace alert with a toast
-      alert("Invalid VIN. Must be 17 characters, no I/O/Q.");
-      return;
-    }
-    
-    navigate(`/vin-check/${encodeURIComponent(cleanedVin)}`);
+    // vin is already trimmed & uppercased by Yup transform
+    const cleanedVin = encodeURIComponent(vin);
+    navigate(`/vin-check/${cleanedVin}`);
   };
 
   return (
     <div className="bg-cyan-100 md:flex">
       {/* Left */}
-      <div className="flex md:w-1/2 md:min-h-screen gap-7 px-10 md:px-25 py-20  flex-col">
+      <div className="flex md:w-1/2 md:min-h-screen gap-7 px-10 md:px-25 py-20 flex-col">
         <h1 className="text-xl md:text-5xl font-bold md:w-140">
           Discover the history of your current or future vehicle.
         </h1>
@@ -44,14 +52,16 @@ export default function HeroSection1() {
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex bg-gray-50 p-3 rounded-lg justify-between gap-3"
+          noValidate
         >
           <div className="flex-1">
             <input
               type="text"
               placeholder="VIN Number"
               maxLength={17}
-              className="w-full outline-none bg-transparent"
-              {...register("vin", { required: "VIN is required" })}
+              className="w-full outline-none bg-transparent uppercase"
+              aria-invalid={!!errors.vin || undefined}
+              {...register("vin")}
             />
             {errors.vin && (
               <div className="text-red-600 text-sm mt-1">{errors.vin.message}</div>
@@ -76,32 +86,28 @@ export default function HeroSection1() {
 
         {/*  “We check” list  */}
         <ul className="space-y-2 grid grid-cols-2 md:grid-cols-3">
-            {[
-              "Accident history",
-              "Ownership records",
-              "Odometer readings",
-              "Title issues",
-              "Manufacturer recalls",
-              "Vehicle specifications",
-            ].map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <svg
-                  className="w-5 h-5 text-green-600 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {[
+            "Accident history",
+            "Ownership records",
+            "Odometer readings",
+            "Title issues",
+            "Manufacturer recalls",
+            "Vehicle specifications",
+          ].map((item) => (
+            <li key={item} className="flex items-center gap-2">
+              <svg
+                className="w-5 h-5 text-green-600 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Right image */}
