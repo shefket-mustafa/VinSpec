@@ -1,8 +1,8 @@
-
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useState } from "react";
 
 // VIN: 17 chars, letters/digits except I, O, Q.
 const vinRegex = /^[A-HJ-NPR-Z0-9]{17}$/;
@@ -20,6 +20,15 @@ type FormValues = yup.InferType<typeof schema>;
 export default function HeroSection1() {
   const navigate = useNavigate();
 
+  const [noVin, setNoVin] = useState(false);
+
+  const noVinHandler = () => {
+    setNoVin(true);
+    setTimeout(() => {
+      setNoVin(false);
+    }, 2000);
+  };
+
   const {
     register,
     handleSubmit,
@@ -29,7 +38,6 @@ export default function HeroSection1() {
     resolver: yupResolver(schema),
     defaultValues: { vin: "" },
   });
-
 
   const onSubmit = ({ vin }: FormValues) => {
     // vin is already trimmed & uppercased by Yup transform
@@ -46,7 +54,8 @@ export default function HeroSection1() {
         </h1>
 
         <h3 className="md:w-120 text-lg">
-          Request a detailed report to avoid bad deals, sell faster, or ensure your vehicle is safe and reliable.
+          Request a detailed report to avoid bad deals, sell faster, or ensure
+          your vehicle is safe and reliable.
         </h3>
 
         <form
@@ -64,7 +73,9 @@ export default function HeroSection1() {
               {...register("vin")}
             />
             {errors.vin && (
-              <div className="text-red-600 text-sm mt-1">{errors.vin.message}</div>
+              <div className="text-red-600 text-sm mt-1">
+                {errors.vin.message}
+              </div>
             )}
           </div>
 
@@ -77,12 +88,12 @@ export default function HeroSection1() {
           </button>
         </form>
 
-        <Link
-          className="border text-center hover:bg-black hover:text-white p-1 rounded-4xl"
-          to="/"
-        >
+        {/* Desktop version */}
+        <button
+          onClick={noVinHandler}
+          className="hidden md:flex w-full items-center justify-center border hover:bg-black hover:text-white px-6 py-2 rounded-3xl cursor-pointer">
           I do not have a VIN
-        </Link>
+        </button>
 
         {/*  “We check” list  */}
         <ul className="space-y-2 grid grid-cols-2 md:grid-cols-3">
@@ -102,7 +113,11 @@ export default function HeroSection1() {
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
               <span>{item}</span>
             </li>
@@ -111,7 +126,15 @@ export default function HeroSection1() {
       </div>
 
       {/* Right image */}
-      <div className="hidden md:flex w-full md:w-1/3 bg-no-repeat bg-center md:ml-20 items-center bg-contain bg-[url('https://miro.medium.com/v2/resize:fit:1250/format:webp/1*QDm2-yzHbpFw6JF_xvdcgg.jpeg')]" />
+      <div className="hidden md:flex w-full md:w-1/3 items-center justify-center md:ml-20">
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1250/format:webp/1*QDm2-yzHbpFw6JF_xvdcgg.jpeg"
+          alt="Car inspection illustration"
+          className={`w-full h-auto max-w-[700px] ${
+            noVin ? "border-4 border-blue-600" : ""
+          }`}
+        />
+      </div>
     </div>
   );
 }
