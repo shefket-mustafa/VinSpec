@@ -1,10 +1,18 @@
 import { Link, useNavigate } from "react-router";
 import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next'
 
 export default function Header() {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const navigate = useNavigate();
+  const {t, i18n} = useTranslation();
+
+  const toggleLanguage = (lng: "bg" | "en") => {
+    if (i18n.language !== lng) {
+      i18n.changeLanguage(lng);
+    }
+  };
 
   const toggleBurger = () => {
     setBurgerOpen((prev) => !prev);
@@ -20,11 +28,11 @@ export default function Header() {
 
       {/* md+ menu */}
       <div className="hidden md:flex gap-5 text-base font-medium">
-        <Link className="hover:text-amber-400" to="/">Home</Link>
-        <Link className="hover:text-amber-400" to="/services">Services</Link>
-        <Link className="hover:text-amber-400" to="/contacts">Contacts</Link>
-        <Link className="hover:text-amber-400" to="/about">About</Link>
-        <Link className="hover:text-amber-400" to="/qa">QA</Link>
+        <Link className="hover:text-amber-400" to="/">{t("home")}</Link>
+        <Link className="hover:text-amber-400" to="/services">{t("services")}</Link>
+        <Link className="hover:text-amber-400" to="/contacts">{t("contacts")}</Link>
+        <Link className="hover:text-amber-400" to="/about">{t("about")}</Link>
+        <Link className="hover:text-amber-400" to="/qa">{t("qa")}</Link>
       </div>
 
       {/* Burger Icon */}
@@ -37,25 +45,28 @@ export default function Header() {
                 left-0 flex flex-col p-3 py-5 px-3 bg-white/97 backdrop:-blur-sm shadow-md border-gray-200 rounded-md"
         >
           <Link onClick={toggleBurger} to="/">
-            Home
+            {t("home")}
           </Link>
           <Link onClick={toggleBurger} to="/services">
-            Services
+          {t("services")}
           </Link>
           <Link onClick={toggleBurger} to="/contacts">
-            Contacts
+          {t("contacts")}
           </Link>
           <Link onClick={toggleBurger} to="/about">
-            About us
+          {t("aboutus")}
           </Link>
           <Link onClick={toggleBurger} to="/qa">
-            Q&A
+          {t("qa")}
           </Link>
         </div>
       )}
 
+    {/* Language toggle */}
       <div className="hidden md:flex ">
-        <p className="bg-amber-300 text-white cursor-pointer rounded-2xl py-1 px-1">BG</p>
+        <button onClick={() => toggleLanguage(i18n.language.startsWith("bg") ? "en" : "bg")} className="bg-amber-300 text-white cursor-pointer rounded-2xl py-1 px-1">
+        {i18n.language.startsWith("bg") ? t("languageShortBG") : t("languageShortEN")}
+        </button>
       </div>
     </div>
   );

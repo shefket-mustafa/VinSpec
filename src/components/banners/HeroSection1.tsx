@@ -68,7 +68,7 @@ export default function HeroSection1() {
               type="text"
               placeholder="VIN Number"
               maxLength={17}
-              className="w-full outline-none bg-transparent uppercase"
+              className="w-full outline-none py-auto bg-transparent uppercase"
               aria-invalid={!!errors.vin || undefined}
               {...register("vin")}
             />
