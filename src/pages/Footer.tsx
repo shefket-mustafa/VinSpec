@@ -1,40 +1,43 @@
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+
+  const { t } = useTranslation("");
+  
   return (
     <footer className="bg-gray-900 text-gray-300 px-6 md:px-20 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand / Logo */}
         <div className="space-y-4">
-          <h1 className="text-2xl font-bold text-white">VinSpec</h1>
+          <h1 className="text-2xl font-bold text-white">{t("footer.brand")}</h1>
           <p className="text-sm">
-            Driving transparency in the automotive world. Trusted by thousands
-            worldwide.
+          {t("footer.tagline")}
           </p>
         </div>
 
         {/* Navigation */}
         <div>
-          <h2 className="text-white font-semibold mb-3">Quick Links</h2>
+          <h2 className="text-white font-semibold mb-3">{t("footer.quickLinks.title")}</h2>
           <ul className="space-y-2 text-sm">
             <li>
               <Link to="/" className="hover:underline">
-                Home
+              {t("footer.quickLinks.home")}
               </Link>
             </li>
             <li>
               <Link to="/about" className="hover:underline">
-                About Us
+              {t("footer.quickLinks.about")}
               </Link>
             </li>
             <li>
               <Link to="/services" className="hover:underline">
-                Services
+              {t("footer.quickLinks.services")}
               </Link>
             </li>
             <li>
               <Link to="/contacts" className="hover:underline">
-                Contact
+              {t("footer.quickLinks.contacts")}
               </Link>
             </li>
           </ul>
@@ -42,26 +45,26 @@ export default function Footer() {
 
         {/* Support */}
         <div>
-          <h2 className="text-white font-semibold mb-3">Support</h2>
+          <h2 className="text-white font-semibold mb-3">{t("footer.support.title")}</h2>
           <ul className="space-y-2 text-sm">
             <li>
               <Link to="/faq" className="hover:underline">
-                FAQ
+              {t("footer.support.faq")}
               </Link>
             </li>
             <li>
               <Link to="/terms" className="hover:underline">
-                Terms of Use
+              {t("footer.support.terms")}
               </Link>
             </li>
             <li>
               <Link to="/privacy" className="hover:underline">
-                Privacy Policy
+              {t("footer.support.privacy")}
               </Link>
             </li>
             <li>
               <Link to="/support" className="hover:underline">
-                Customer Support
+              {t("footer.support.customerSupport")}
               </Link>
             </li>
           </ul>
@@ -69,9 +72,9 @@ export default function Footer() {
 
         {/* Contact + Social */}
         <div>
-          <h2 className="text-white font-semibold mb-3">Get in Touch</h2>
-          <p className="text-sm mb-2">Email: shefket.must@gmail.com</p>
-          <p className="text-sm mb-4">Phone: +359 (89) 422-9461</p>
+          <h2 className="text-white font-semibold mb-3">{t("footer.contact.title")}</h2>
+          <p className="text-sm mb-2">{t("footer.contact.emailLabel")}: shefket.must@gmail.com</p>
+          <p className="text-sm mb-4">{t("footer.contact.phoneLabel")}: +359 (89) 422-9461</p>
           <div className="flex space-x-4">
             <a href="https://www.instagram.com/shefket_sum/" target="blank">
               {" "}
@@ -111,7 +114,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-center">
-        &copy; {new Date().getFullYear()} VinSpec. All rights reserved.
+        &copy; {new Date().getFullYear()} {t("footer.brand")}. {t("footer.bottom.rights")}
       </div>
     </footer>
   );

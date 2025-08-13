@@ -127,6 +127,32 @@
           "accessLabel": "Access",
           "replyTimeLabel": "Maximum reply time"
         }
+      },
+      "footer": {
+        "brand": "VinSpec",
+        "tagline": "Driving transparency in the automotive world. Trusted by thousands worldwide.",
+        "quickLinks": {
+          "title": "Quick Links",
+          "home": "Home",
+          "about": "About Us",
+          "services": "Services",
+          "contacts": "Contact"
+        },
+        "support": {
+          "title": "Support",
+          "faq": "FAQ",
+          "terms": "Terms of Use",
+          "privacy": "Privacy Policy",
+          "customerSupport": "Customer Support"
+        },
+        "contact": {
+          "title": "Get in Touch",
+          "emailLabel": "Email",
+          "phoneLabel": "Phone"
+        },
+        "bottom": {
+          "rights": "All rights reserved."
+        }
       }
     
   }
