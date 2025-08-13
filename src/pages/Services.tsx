@@ -2,8 +2,10 @@ import Switch from "@mui/material/Switch";
 import { useState } from "react";
 import ServicesItem from "../components/ServicesItem";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
+   const { t } = useTranslation();
   const [checkedSwitch, setCheckedSwitch] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState<string | null>(null);
 
@@ -15,9 +17,9 @@ export default function Services() {
   return (
     <div className="min-h-screen w-full bg-cyan-50">
       <div className="flex flex-col justify-center text-center items-center py-20 px-5 gap-5">
-        <h1 className="text-3xl md:text-5xl font-bold">Services</h1>
+        <h1 className="text-3xl md:text-5xl font-bold">{t("servicesPage.title")}</h1>
         <p className="font-light text-xl">
-          Request a report to avoid bad deals, sell faster, or find out whether your vehicle is safe.
+        {t("servicesPage.subtitle")}
         </p>
 
         <div className="flex justify-center items-center mt-10">
@@ -26,7 +28,7 @@ export default function Services() {
             onChange={(e) => setCheckedSwitch(e.target.checked)}
             slotProps={{ input: { "aria-label": "controlled" } }}
           />
-          <p className="font-bold">Show prices for businesses</p>
+          <p className="font-bold">{t("servicesPage.businessToggle")}</p>
         </div>
       </div>
 
@@ -60,7 +62,7 @@ export default function Services() {
         />
       </div>
       <div className="flex justify-center items-center py-10">
-      <Link className='px-10 md:px-25 py-2 text-white rounded-2xl bg-amber-300' to='/contacts'>Continue</Link>
+      <Link className='px-10 md:px-25 py-2 text-white rounded-2xl bg-amber-300' to='/contacts'>{t("servicesPage.cta")}</Link>
       </div>
     </div>
   );

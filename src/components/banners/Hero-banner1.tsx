@@ -1,12 +1,14 @@
+import { useTranslation } from 'react-i18next'
 import PeopleIcons from "../PeopleIcons";
 
 export default function HeroBanner1() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col md:flex-row gap-10 h-20 items-center px-10 md:px-25">
       <div className=" flex items-center md:justify-center gap-5">
         {/* people icons image */}
         <PeopleIcons />
-        <p className="text-sm">Over 900,000,000 people from over 35 countries have trusted us.</p>
+        <p className="text-sm">{t("heroBanner1.trusted")}</p>
       </div>
 
       <div

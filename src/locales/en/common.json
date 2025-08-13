@@ -1,0 +1,309 @@
+{
+    "header": {
+      "brand": "VinSpec",
+      "nav": {
+        "home": "Home",
+        "services": "Services",
+        "contacts": "Contacts",
+        "about": "About",
+        "aboutUs": "About us",
+        "qa": "Q&A"
+      },
+      "language": {
+        "shortBG": "BG",
+        "shortEN": "EN"
+      }
+    },
+    "heroSection1": {
+      "title": "Discover the history of your current or future vehicle.",
+      "subtitle": "Request a detailed report to avoid bad deals, sell faster, or ensure your vehicle is safe and reliable.",
+      "form": {
+        "placeholder": "VIN Number",
+        "submit": "Check",
+        "noVin": "I do not have a VIN",
+        "alt": "Car inspection illustration",
+        "validation": {
+          "vinRequired": "VIN is required",
+          "vinInvalid": "Invalid VIN. Must be 17 characters, no I/O/Q."
+        }
+      },
+      "weCheck": [
+        "Accident history",
+        "Ownership records",
+        "Odometer readings",
+        "Title issues",
+        "Manufacturer recalls",
+        "Vehicle specifications"
+      ]
+    },
+    "heroBanner1": {
+        "trusted": "Over 9,000,000 people from over 35 countries have trusted us."
+      },
+      "heroBanner2": {
+        "title": "What do we check for in the report?",
+        "subtitle": "VinSpec is the largest online database for used vehicles, containing over one billion data entries from around the world.",
+        "tabs": {
+          "images": "Recorded images",
+          "damages": "Damages",
+          "odometer": "Odometer rollbacks",
+          "specifications": "Specifications and equipment",
+          "marketValue": "Market value",
+          "safety": "Safety records",
+          "disaster": "Natural disasters"
+        },
+        "content": {
+          "images": "We search auctions, classifieds, and insurer records for historic photos of the vehicle.",
+          "damages": "See reported accidents, repairs, and damage estimates to avoid hidden issues.",
+          "odometer": "Mileage readings over time to detect rollbacks or inconsistencies.",
+          "specifications": "Factory specs, options, and installed equipment decoded from the VIN.",
+          "marketValue": "Current market estimates based on model, mileage, and condition.",
+          "safety": "Safety test results and recall status from official sources.",
+          "disaster": "Floods, fires, and other natural-disaster indicators tied to the vehicle’s history."
+        }
+      },
+      "heroBanner3": {
+        "title": "Choose wisely",
+        "subtitle": "Make sure that your new vehicle is a reliable companion",
+        "cards": {
+          "avoid": {
+            "title": "Avoid expensive mistakes",
+            "desc": "Learn every vehicle's history so you don't throw your money to the wind.",
+            "alt": "avoid expensive mistakes"
+          },
+          "time": {
+            "title": "Save valuable time",
+            "desc": "Test drives take hours, so narrow down your choices in advance.",
+            "alt": "save valuable time"
+          },
+          "deal": {
+            "title": "Make a better deal",
+            "desc": "Once you've chosen your next vehicle, we have the facts to help you lower its price.",
+            "alt": "make a better deal"
+          }
+        }
+    },
+    "customerReviews": {
+        "title": "Check our customer reviews",
+        "subtitle": "Find out why they use VinSpec to make better deals when buying a car",
+        "verified": "Verified",
+        "items": {
+          "1": {
+            "customer": "JS",
+            "message": "It is very calming knowing that you have all of the information available on the car you are buying beforehand. The website offers a very thorough check. Appreciate you guys!"
+          },
+          "2": {
+            "customer": "Barack",
+            "message": "Overall the app is great. It is a bit expensive, but it's worth it! Better to pay a little more than throw thousands of euros at a car you know nothing about. They helped me avoid a car with a rolled back odometer—kudos!"
+          },
+          "3": {
+            "customer": "Trump",
+            "message": "Here is my experience with VinSpec. I went to check a car yesterday listed at 63,000 km. I liked it and was about to buy it, but my wife made me get a report first and voilà—the real mileage was 457,000."
+          }
+        }
+      },
+      "worldMapBanner": {
+        "title": "Leaders in the field of automotive data",
+        "p1": "Since our founding in 2025, we have expanded to 35 markets and continue to grow. The listed countries show where you can access VinSpec reports.",
+        "p2": "Our vehicle history reports are based on data from over 900 international databases, including national vehicle registries, insurance companies, legal agencies, and other institutions."
+      },
+      "expandBanner": {
+        "title": "Expand your automobile business",
+        "subtitle": "Our products will increase the effectiveness and transparency of your automobile business",
+        "bullets": {
+          "risk": "Reduce the risk of unexpected expenses",
+          "evaluation": "Simplify the vehicle evaluation process",
+          "speed": "Speed up your sales"
+        },
+        "cta": "Become a partner"
+      },
+      "supportBanner": {
+        "title": "Have any questions?",
+        "subtitle": "We are here 24/7 to assist you",
+        "cta1": "Get answers to your questions. Just send us an",
+        "link": "email",
+        "cta2": "and we will contact you ASAP!",
+        "stats": {
+          "satisfactionLabel": "Client satisfactory",
+          "accessLabel": "Access",
+          "replyTimeLabel": "Maximum reply time"
+        }
+      },
+      "footer": {
+        "brand": "VinSpec",
+        "tagline": "Driving transparency in the automotive world. Trusted by thousands worldwide.",
+        "quickLinks": {
+          "title": "Quick Links",
+          "home": "Home",
+          "about": "About Us",
+          "services": "Services",
+          "contacts": "Contact"
+        },
+        "support": {
+          "title": "Support",
+          "faq": "FAQ",
+          "terms": "Terms of Use",
+          "privacy": "Privacy Policy",
+          "customerSupport": "Customer Support"
+        },
+        "contact": {
+          "title": "Get in Touch",
+          "emailLabel": "Email",
+          "phoneLabel": "Phone"
+        },
+        "bottom": {
+          "rights": "All rights reserved."
+        }
+      },
+      "servicesPage": {
+        "title": "Services",
+        "subtitle": "Request a report to avoid bad deals, sell faster, or find out whether your vehicle is safe.",
+        "businessToggle": "Show prices for businesses",
+        "cta": "Continue"
+      },
+      "servicesItem": {
+        "checkMvs_one": "Check {{count}} MV",
+        "checkMvs_other": "Check {{count}} MVs",
+        "perReport": "/ report",
+        "youPay": "You pay {{amount}}€.",
+        "noDiscount": "No discount",
+        "refundPolicy": "Refund policy"
+      },
+      "contactsPage": {
+        "title": "Contact Us",
+        "success": "Request Submitted!",
+        "form": {
+          "name": "Your Name",
+          "email": "Email Address",
+          "message": "Your Message",
+          "send": "Send Message"
+        },
+        "info": {
+          "officeTitle": "Our Office",
+          "emailTitle": "Email",
+          "phoneTitle": "Phone",
+          "hoursTitle": "Business Hours",
+          "hours": {
+            "weekdays": "Mon – Fri: 9:00 AM – 6:00 PM",
+            "weekend": "Sat – Sun: Closed"
+          },
+          "address": {
+            "line1": "123 King Arthur Street",
+            "city": "Burgas",
+            "country": "Bulgaria"
+          }
+        }
+      },
+      "aboutPage": {
+        "title": "About VinSpec",
+        "intro": "At VinSpec, we are passionate about delivering reliable vehicle inspections and helping our clients make informed decisions with confidence.",
+        "imageAlt": "Vehicle inspection",
+        "whoWeAre": {
+          "title": "Who We Are",
+          "p1": "Founded in 2025, VinSpec has been committed to providing professional and transparent inspection services for all types of vehicles. Our experienced team ensures that every report is thorough, accurate, and easy to understand.",
+          "p2": "Whether you are purchasing a new car, selling your current one, or just want peace of mind about your vehicle’s condition, we are here to help. We combine modern technology with expert knowledge to give you the insights you need."
+        },
+        "mission": {
+          "title": "Our Mission",
+          "p": "Our mission is to empower every customer with accurate, unbiased vehicle assessments, ensuring safety, transparency, and trust in the automotive industry."
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "What is a VIN and why is it important?",
+            "answer": "A Vehicle Identification Number (VIN) is a unique 17-character code assigned to every vehicle. It reveals key details like the manufacturer, model, year, and history, helping you verify the vehicle's authenticity."
+          },
+          {
+            "question": "How accurate is the information from VinSpec?",
+            "answer": "We gather data from trusted automotive databases, insurance records, and government agencies. While accuracy is very high, the completeness of records can vary depending on the country and available data sources."
+          },
+          {
+            "question": "How long does a VIN check take?",
+            "answer": "Most VIN checks are processed instantly, returning results in just a few seconds. In rare cases where additional verification is required, it may take up to a minute."
+          },
+          {
+            "question": "Can you check VINs from any country?",
+            "answer": "Yes, VinSpec supports VINs from most countries worldwide. However, some countries may have limited or restricted access to certain records due to privacy laws."
+          },
+          {
+            "question": "Do I need to create an account to use VinSpec?",
+            "answer": "No account is required for a basic VIN check. However, registering allows you to save past searches, receive full reports via email, and unlock advanced features."
+          },
+          {
+            "question": "What kind of details will the VIN report include?",
+            "answer": "Depending on the vehicle and data availability, the report may include manufacturing details, accident history, title information, mileage records, ownership history, market value, and recall notices."
+          },
+          {
+            "question": "Is my data safe when I use VinSpec?",
+            "answer": "Absolutely. All data sent and received through VinSpec is encrypted, and we do not share your personal information with third parties without your consent."
+          },
+          {
+            "question": "What if my VIN is less than 17 characters?",
+            "answer": "VINs for modern vehicles (post-1981) are always 17 characters. Shorter VINs typically belong to older or special vehicles, and in such cases, certain information may be unavailable."
+          },
+          {
+            "question": "Can I use VinSpec on my phone?",
+            "answer": "Yes, VinSpec is fully responsive and works on any device, including smartphones and tablets. You can check a VIN on the go from anywhere."
+          },
+          {
+            "question": "Do you offer bulk VIN checks for dealerships or businesses?",
+            "answer": "Yes, we provide bulk VIN lookup services for car dealerships, insurance companies, and fleet managers. Contact our support team for custom business plans."
+          }
+        ]
+      },
+      "vinCheck": {
+        "title": "VIN Details - {{vin}}",
+        "loading": "Fetching VIN info…",
+        "showAll": "Show all decoded fields",
+        "dash": "—",
+        "labels": {
+          "make": "Make",
+          "model": "Model",
+          "modelYear": "Model Year",
+          "trim": "Trim",
+          "engine": "Engine",
+          "bodyClass": "Body Class",
+          "plantCountry": "Plant Country",
+          "vehicleType": "Vehicle Type",
+          "manufacturer": "Manufacturer",
+          "notAvailable": "Not available!"
+        },
+        "labelsMap": {
+          "Make": "Make",
+          "Model": "Model",
+          "ModelYear": "Model Year",
+          "Trim": "Trim",
+          "EngineConfiguration": "Engine Configuration",
+          "EngineModel": "Engine Model",
+          "BodyClass": "Body Class",
+          "PlantCountry": "Plant Country",
+          "VehicleType": "Vehicle Type",
+          "ManufacturerName": "Manufacturer"
+        }
+      },
+      "privacyPolicy": {
+        "title": "Privacy Policy",
+        "updated": "Last updated: March 10, 2025",
+        "intro": "We value your privacy. This policy explains how VinSpec collects, uses, and protects your personal data when you use our website and services.",
+        "dataTitle": "Information We Collect",
+        "dataText": "We collect VIN numbers, contact details you provide, and anonymous analytics data to improve our service.",
+        "usageTitle": "How We Use Your Information",
+        "usageText": "We use the collected data to provide accurate VIN reports, improve our services, and communicate important updates.",
+        "contactTitle": "Contact Us",
+        "contactText": "If you have questions about this policy, email us at privacy@vinspec.com."
+      },
+      "termsOfUse": {
+        "title": "Terms of Use",
+        "updated": "Last updated: March 10, 2025",
+        "intro": "By using the VinSpec website and services, you agree to the terms outlined below.",
+        "usageTitle": "Acceptable Use",
+        "usageText": "You agree to use VinSpec only for lawful purposes and not to misuse the information provided in our reports.",
+        "responsibilityTitle": "User Responsibility",
+        "responsibilityText": "You are responsible for the accuracy of the VIN numbers you submit. VinSpec is not liable for decisions made based on incomplete or inaccurate data.",
+        "contactTitle": "Contact Us",
+        "contactText": "For questions about these terms, email us at support@vinspec.com."
+      }
+    
+  }
+  

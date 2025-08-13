@@ -1,3 +1,5 @@
+
+
 export const bannerData = {
     images: {
       url: 'https://www.carvertical.com/_next/image?url=%2Fimages%2Ffeatures%2Fphotos-en.png&w=1080&q=100',
