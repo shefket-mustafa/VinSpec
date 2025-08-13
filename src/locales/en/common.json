@@ -105,6 +105,16 @@
         "title": "Leaders in the field of automotive data",
         "p1": "Since our founding in 2025, we have expanded to 35 markets and continue to grow. The listed countries show where you can access VinSpec reports.",
         "p2": "Our vehicle history reports are based on data from over 900 international databases, including national vehicle registries, insurance companies, legal agencies, and other institutions."
+      },
+      "expandBanner": {
+        "title": "Expand your automobile business",
+        "subtitle": "Our products will increase the effectiveness and transparency of your automobile business",
+        "bullets": {
+          "risk": "Reduce the risk of unexpected expenses",
+          "evaluation": "Simplify the vehicle evaluation process",
+          "speed": "Speed up your sales"
+        },
+        "cta": "Become a partner"
       }
     
   }

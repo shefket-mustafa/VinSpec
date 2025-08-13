@@ -1,16 +1,18 @@
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 export default function ExpandBanner() {
+
+  const { t } = useTranslation();
   return (
     <div className="md:min-h-screen flex items-center flex-col md:flex-row py-20 bg-cyan-100 md:px-20">
       <div className="w-1/2 flex flex-col justify-center items-start text-left">
         <h1 className="text-3xl md:text-5xl py-3">
-          Expand your automobile business
+        {t("expandBanner.title")}
         </h1>
 
         <h2 className="font-light">
-          Our products will increase the effectiveness and transparency of your
-          automobile business
+        {t("expandBanner.subtitle")}
         </h2>
 
         <div className="py-5">
@@ -32,7 +34,7 @@ export default function ExpandBanner() {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <p> Reduce the risk of unexpected expenses</p>
+            <p> {t("expandBanner.bullets.risk")}</p>
           </div>
 
           <div className="flex gap-1 items-center ">
@@ -53,7 +55,7 @@ export default function ExpandBanner() {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <p>Simplify the vehicle evaluation process</p>
+            <p>{t("expandBanner.bullets.evaluation")}</p>
           </div>
 
           <div className="flex gap-1 items-center ">
@@ -74,7 +76,7 @@ export default function ExpandBanner() {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <p>Speed up your sales</p>
+            <p>{t("expandBanner.bullets.speed")}</p>
           </div>
         </div>
 
@@ -82,7 +84,7 @@ export default function ExpandBanner() {
           className="bg-amber-300 px-3 py-1 rounded-2xl mt-5"
           to="/contacts"
         >
-          Become a partner
+          {t("expandBanner.cta")}
         </Link>
       </div>
 
