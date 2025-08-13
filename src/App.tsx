@@ -12,6 +12,7 @@ import ErrorPage from "./pages/ErrorPage"
 import InvalidVin from "./pages/InvalidVin"
 import RefundPolicy from "./pages/RefundPolicy"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsOfUse from "./pages/TermsOfUse"
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
   <Route path="/invalid-vin" element={<InvalidVin />} />
   <Route path="/refund-policy" element={<RefundPolicy />} />
   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+  <Route path="/terms" element={<TermsOfUse />} />
 
 
   <Route path="*" element={<ErrorPage />} />

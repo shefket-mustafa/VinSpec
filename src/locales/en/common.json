@@ -292,6 +292,17 @@
         "usageText": "We use the collected data to provide accurate VIN reports, improve our services, and communicate important updates.",
         "contactTitle": "Contact Us",
         "contactText": "If you have questions about this policy, email us at privacy@vinspec.com."
+      },
+      "termsOfUse": {
+        "title": "Terms of Use",
+        "updated": "Last updated: March 10, 2025",
+        "intro": "By using the VinSpec website and services, you agree to the terms outlined below.",
+        "usageTitle": "Acceptable Use",
+        "usageText": "You agree to use VinSpec only for lawful purposes and not to misuse the information provided in our reports.",
+        "responsibilityTitle": "User Responsibility",
+        "responsibilityText": "You are responsible for the accuracy of the VIN numbers you submit. VinSpec is not liable for decisions made based on incomplete or inaccurate data.",
+        "contactTitle": "Contact Us",
+        "contactText": "For questions about these terms, email us at support@vinspec.com."
       }
     
   }
