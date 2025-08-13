@@ -32,7 +32,7 @@ export default function Header() {
         <Link className="hover:text-amber-400" to="/services">{t("header.nav.services")}</Link>
         <Link className="hover:text-amber-400" to="/contacts">{t("header.nav.contacts")}</Link>
         <Link className="hover:text-amber-400" to="/about">{t("header.nav.about")}</Link>
-        <Link className="hover:text-amber-400" to="/qa">{t("header.nav.qa")}</Link>
+        <Link className="hover:text-amber-400" to="/faq">{t("header.nav.qa")}</Link>
       </div>
 
       {/* Burger Icon */}

@@ -281,6 +281,17 @@
           "VehicleType": "Vehicle Type",
           "ManufacturerName": "Manufacturer"
         }
+      },
+      "privacyPolicy": {
+        "title": "Privacy Policy",
+        "updated": "Last updated: March 10, 2025",
+        "intro": "We value your privacy. This policy explains how VinSpec collects, uses, and protects your personal data when you use our website and services.",
+        "dataTitle": "Information We Collect",
+        "dataText": "We collect VIN numbers, contact details you provide, and anonymous analytics data to improve our service.",
+        "usageTitle": "How We Use Your Information",
+        "usageText": "We use the collected data to provide accurate VIN reports, improve our services, and communicate important updates.",
+        "contactTitle": "Contact Us",
+        "contactText": "If you have questions about this policy, email us at privacy@vinspec.com."
       }
     
   }

@@ -58,12 +58,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/privacy" className="hover:underline">
+              <Link to="/privacy-policy" className="hover:underline">
               {t("footer.support.privacy")}
               </Link>
             </li>
             <li>
-              <Link to="/support" className="hover:underline">
+              <Link to="/contacts" className="hover:underline">
               {t("footer.support.customerSupport")}
               </Link>
             </li>
