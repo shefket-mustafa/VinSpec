@@ -251,6 +251,36 @@
             "answer": "Yes, we provide bulk VIN lookup services for car dealerships, insurance companies, and fleet managers. Contact our support team for custom business plans."
           }
         ]
+      },
+      "vinCheck": {
+        "title": "VIN Details - {{vin}}",
+        "loading": "Fetching VIN info…",
+        "showAll": "Show all decoded fields",
+        "dash": "—",
+        "labels": {
+          "make": "Make",
+          "model": "Model",
+          "modelYear": "Model Year",
+          "trim": "Trim",
+          "engine": "Engine",
+          "bodyClass": "Body Class",
+          "plantCountry": "Plant Country",
+          "vehicleType": "Vehicle Type",
+          "manufacturer": "Manufacturer",
+          "notAvailable": "Not available!"
+        },
+        "labelsMap": {
+          "Make": "Make",
+          "Model": "Model",
+          "ModelYear": "Model Year",
+          "Trim": "Trim",
+          "EngineConfiguration": "Engine Configuration",
+          "EngineModel": "Engine Model",
+          "BodyClass": "Body Class",
+          "PlantCountry": "Plant Country",
+          "VehicleType": "Vehicle Type",
+          "ManufacturerName": "Manufacturer"
+        }
       }
     
   }
