@@ -8,19 +8,21 @@ import { useTranslation } from 'react-i18next'
 // VIN: 17 chars, letters/digits except I, O, Q.
 const vinRegex = /^[A-HJ-NPR-Z0-9]{17}$/;
 
-const schema = yup.object({
-  vin: yup
-  .string()
-  .required("VIN is required")
-  .transform((v) => (v || "").trim().toUpperCase())
-  .matches(vinRegex, "Invalid VIN. Must be 17 characters, no I/O/Q."),
-});
 
-type FormValues = yup.InferType<typeof schema>;
+
 
 export default function HeroSection1() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  
+  const schema = yup.object({
+    vin: yup
+    .string()
+    .required(t("heroSection1.form.validation.vinRequired"))
+    .transform((v) => (v || "").trim().toUpperCase())
+    .matches(vinRegex, t("heroSection1.form.validation.vinInvalid")),
+  });
+  type FormValues = yup.InferType<typeof schema>;
 
   const [noVin, setNoVin] = useState(false);
 
