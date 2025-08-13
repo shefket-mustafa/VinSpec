@@ -192,6 +192,20 @@
             "country": "Bulgaria"
           }
         }
+      },
+      "aboutPage": {
+        "title": "About VinSpec",
+        "intro": "At VinSpec, we are passionate about delivering reliable vehicle inspections and helping our clients make informed decisions with confidence.",
+        "imageAlt": "Vehicle inspection",
+        "whoWeAre": {
+          "title": "Who We Are",
+          "p1": "Founded in 2025, VinSpec has been committed to providing professional and transparent inspection services for all types of vehicles. Our experienced team ensures that every report is thorough, accurate, and easy to understand.",
+          "p2": "Whether you are purchasing a new car, selling your current one, or just want peace of mind about your vehicle’s condition, we are here to help. We combine modern technology with expert knowledge to give you the insights you need."
+        },
+        "mission": {
+          "title": "Our Mission",
+          "p": "Our mission is to empower every customer with accurate, unbiased vehicle assessments, ensuring safety, transparency, and trust in the automotive industry."
+        }
       }
     
   }
