@@ -115,6 +115,18 @@
           "speed": "Speed up your sales"
         },
         "cta": "Become a partner"
+      },
+      "supportBanner": {
+        "title": "Have any questions?",
+        "subtitle": "We are here 24/7 to assist you",
+        "cta1": "Get answers to your questions. Just send us an",
+        "link": "email",
+        "cta2": "and we will contact you ASAP!",
+        "stats": {
+          "satisfactionLabel": "Client satisfactory",
+          "accessLabel": "Access",
+          "replyTimeLabel": "Maximum reply time"
+        }
       }
     
   }
