@@ -35,6 +35,52 @@
         "Manufacturer recalls",
         "Vehicle specifications"
       ]
+    },
+    "heroBanner1": {
+        "trusted": "Over 9,000,000 people from over 35 countries have trusted us."
+      },
+      "heroBanner2": {
+        "title": "What do we check for in the report?",
+        "subtitle": "VinSpec is the largest online database for used vehicles, containing over one billion data entries from around the world.",
+        "tabs": {
+          "images": "Recorded images",
+          "damages": "Damages",
+          "odometer": "Odometer rollbacks",
+          "specifications": "Specifications and equipment",
+          "marketValue": "Market value",
+          "safety": "Safety records",
+          "disaster": "Natural disasters"
+        },
+        "content": {
+          "images": "We search auctions, classifieds, and insurer records for historic photos of the vehicle.",
+          "damages": "See reported accidents, repairs, and damage estimates to avoid hidden issues.",
+          "odometer": "Mileage readings over time to detect rollbacks or inconsistencies.",
+          "specifications": "Factory specs, options, and installed equipment decoded from the VIN.",
+          "marketValue": "Current market estimates based on model, mileage, and condition.",
+          "safety": "Safety test results and recall status from official sources.",
+          "disaster": "Floods, fires, and other natural-disaster indicators tied to the vehicle’s history."
+        }
+      },
+      "heroBanner3": {
+        "title": "Choose wisely",
+        "subtitle": "Make sure that your new vehicle is a reliable companion",
+        "cards": {
+          "avoid": {
+            "title": "Avoid expensive mistakes",
+            "desc": "Learn every vehicle's history so you don't throw your money to the wind.",
+            "alt": "avoid expensive mistakes"
+          },
+          "time": {
+            "title": "Save valuable time",
+            "desc": "Test drives take hours, so narrow down your choices in advance.",
+            "alt": "save valuable time"
+          },
+          "deal": {
+            "title": "Make a better deal",
+            "desc": "Once you've chosen your next vehicle, we have the facts to help you lower its price.",
+            "alt": "make a better deal"
+          }
+        }
     }
   }
   
