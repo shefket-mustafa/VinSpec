@@ -81,6 +81,26 @@
             "alt": "make a better deal"
           }
         }
-    }
+    },
+    "customerReviews": {
+        "title": "Check our customer reviews",
+        "subtitle": "Find out why they use VinSpec to make better deals when buying a car",
+        "verified": "Verified",
+        "items": {
+          "1": {
+            "customer": "JS",
+            "message": "It is very calming knowing that you have all of the information available on the car you are buying beforehand. The website offers a very thorough check. Appreciate you guys!"
+          },
+          "2": {
+            "customer": "Barack",
+            "message": "Overall the app is great. It is a bit expensive, but it's worth it! Better to pay a little more than throw thousands of euros at a car you know nothing about. They helped me avoid a car with a rolled back odometer—kudos!"
+          },
+          "3": {
+            "customer": "Trump",
+            "message": "Here is my experience with VinSpec. I went to check a car yesterday listed at 63,000 km. I liked it and was about to buy it, but my wife made me get a report first and voilà—the real mileage was 457,000."
+          }
+        }
+      }
+    
   }
   

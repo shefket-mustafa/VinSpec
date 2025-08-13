@@ -1,4 +1,4 @@
-
+import { useTranslation } from 'react-i18next';
 interface ReviewItem {
     message: string,
     customer: string,
@@ -6,6 +6,8 @@ interface ReviewItem {
 
 
 export default function CustomerReviewsItem({message, customer} : ReviewItem) {
+
+    const { t } = useTranslation();
 
     return(
 
@@ -22,7 +24,7 @@ export default function CustomerReviewsItem({message, customer} : ReviewItem) {
 
                 <div className="flex gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="h-5 _root_1o0ex_1 _xs_1o0ex_11 _icon_1styv_121" aria-hidden="true" focusable="false"><path stroke="currentColor" d="M3 8.37l3.608 3.2L13 4.429"></path></svg>
-                <p className="text-xs bg-green-600 px-1 py-1">Verified</p>
+                <p className="text-xs bg-green-600 px-1 py-1">{t("customerReviews.verified")}</p>
                 </div>
 
             </div>
