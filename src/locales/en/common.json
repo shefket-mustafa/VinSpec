@@ -167,6 +167,31 @@
         "youPay": "You pay {{amount}}€.",
         "noDiscount": "No discount",
         "refundPolicy": "Refund policy"
+      },
+      "contactsPage": {
+        "title": "Contact Us",
+        "success": "Request Submitted!",
+        "form": {
+          "name": "Your Name",
+          "email": "Email Address",
+          "message": "Your Message",
+          "send": "Send Message"
+        },
+        "info": {
+          "officeTitle": "Our Office",
+          "emailTitle": "Email",
+          "phoneTitle": "Phone",
+          "hoursTitle": "Business Hours",
+          "hours": {
+            "weekdays": "Mon – Fri: 9:00 AM – 6:00 PM",
+            "weekend": "Sat – Sun: Closed"
+          },
+          "address": {
+            "line1": "123 King Arthur Street",
+            "city": "Burgas",
+            "country": "Bulgaria"
+          }
+        }
       }
     
   }

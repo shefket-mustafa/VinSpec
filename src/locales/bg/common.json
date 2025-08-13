@@ -167,6 +167,31 @@
         "youPay": "Плащате {{amount}}€.",
         "noDiscount": "Без отстъпка",
         "refundPolicy": "Политика за възстановяване"
-      }
+      },
+      "contactsPage": {
+        "title": "Свържете се с нас",
+        "success": "Запитването е изпратено!",
+        "form": {
+          "name": "Вашето име",
+          "email": "Имейл адрес",
+          "message": "Вашето съобщение",
+          "send": "Изпрати съобщение"
+        },
+        "info": {
+          "officeTitle": "Нашият офис",
+          "emailTitle": "Имейл",
+          "phoneTitle": "Телефон",
+          "hoursTitle": "Работно време",
+          "hours": {
+            "weekdays": "Пон – Пет: 9:00 – 18:00",
+            "weekend": "Съб – Нед: Почивни дни"
+          },
+          "address": {
+            "line1": "123 King Arthur Street",
+            "city": "Бургас",
+            "country": "България"
+          }
+        }
+    }
   }
   
