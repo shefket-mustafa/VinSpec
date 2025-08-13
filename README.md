@@ -10,6 +10,8 @@ VinSpec offers a **subscription-based** service for vehicle inspection reports, 
 - **Vehicle Inspection Reports**: Get detailed reports about a vehicle's condition based on its VIN (Vehicle Identification Number).
 - **Subscription Model**: While the app simulates a free service, it includes a subscription feature that provides more in-depth reports and advanced tools for users who sign up for premium access which is an idea for a future real-world project.
 - **Real-time Data**: The app fetches vehicle data from an external API to provide the most up-to-date information about cars.
+- **Multilingual Support**: Toggle seamlessly between **English** and **Bulgarian**.
+- **State Management with Redux**: Centralized state handling for language selection and other global app features. (CURRENTLY IMPLEMENTING)
 
   **Note:** The data provided by the API in the free version might not always be fully accurate, as it relies on limited information from a free source. Some vehicle details may be incomplete or missing.
   
