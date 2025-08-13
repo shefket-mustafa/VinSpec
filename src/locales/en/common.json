@@ -153,6 +153,20 @@
         "bottom": {
           "rights": "All rights reserved."
         }
+      },
+      "servicesPage": {
+        "title": "Services",
+        "subtitle": "Request a report to avoid bad deals, sell faster, or find out whether your vehicle is safe.",
+        "businessToggle": "Show prices for businesses",
+        "cta": "Continue"
+      },
+      "servicesItem": {
+        "checkMvs_one": "Check {{count}} MV",
+        "checkMvs_other": "Check {{count}} MVs",
+        "perReport": "/ report",
+        "youPay": "You pay {{amount}}€.",
+        "noDiscount": "No discount",
+        "refundPolicy": "Refund policy"
       }
     
   }
