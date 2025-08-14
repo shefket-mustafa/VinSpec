@@ -35,6 +35,13 @@ export default function Header() {
         <Link className="hover:text-amber-400" to="/faq">{t("header.nav.qa")}</Link>
       </div>
 
+       {/* Language toggle */}
+       <div className="md:flex ">
+        <button onClick={() => toggleLanguage(i18n.language.startsWith("bg") ? "en" : "bg")} className="bg-amber-300 text-white cursor-pointer rounded-2xl py-1 px-2">
+        {i18n.language.startsWith("bg") ? t("header.language.shortBG") : t("header.language.shortEN")}
+        </button>
+      </div>
+
       {/* Burger Icon */}
       <IoMenu onClick={toggleBurger} className="md:hidden text-2xl cursor-pointer text-gray-700" />
 
@@ -54,7 +61,7 @@ export default function Header() {
           {t("header.nav.contacts")}
           </Link>
           <Link onClick={toggleBurger} to="/about">
-          {t("header.nav.aboutus")}
+          {t("header.nav.aboutUs")}
           </Link>
           <Link onClick={toggleBurger} to="/qa">
           {t("header.nav.qa")}
@@ -62,12 +69,7 @@ export default function Header() {
         </div>
       )}
 
-    {/* Language toggle */}
-      <div className="hidden md:flex ">
-        <button onClick={() => toggleLanguage(i18n.language.startsWith("bg") ? "en" : "bg")} className="bg-amber-300 text-white cursor-pointer rounded-2xl py-1 px-1">
-        {i18n.language.startsWith("bg") ? t("header.language.shortBG") : t("header.language.shortEN")}
-        </button>
-      </div>
+   
     </div>
   );
 }
