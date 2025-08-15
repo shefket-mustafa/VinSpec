@@ -54,7 +54,7 @@ export default function HeroSection1() {
   return (
     <div className="bg-cyan-100 md:flex">
       {/* Left */}
-      <div className="flex md:w-1/2 md:min-h-screen gap-7 px-10 md:px-25 py-20 flex-col">
+      <div className="flex md:w-1/2 md:min-h-screen gap-7 px-10 md:px-24 py-20 flex-col">
         <h1 className="text-xl md:text-5xl font-bold md:w-140">
           {t("heroSection1.title")}
         </h1>
@@ -65,7 +65,7 @@ export default function HeroSection1() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex bg-gray-50 p-3 rounded-lg justify-between gap-3"
+          className="flex bg-gray-50 p-3 rounded-lg justify-between items-center gap-3"
           noValidate
         >
           <div className="flex-1">
@@ -73,7 +73,7 @@ export default function HeroSection1() {
               type="text"
               placeholder= {t("heroSection1.form.placeholder")}
               maxLength={17}
-              className="w-full outline-none py-auto bg-transparent uppercase"
+              className="w-full outline-none  bg-transparent uppercase"
               aria-invalid={!!errors.vin || undefined}
               {...register("vin")}
             />
@@ -103,8 +103,8 @@ export default function HeroSection1() {
         {/*  “We check” list  */}
         <ul className="space-y-2 grid grid-cols-2 md:grid-cols-3">
           {checkItems
-          .map((item) => (
-            <li className="flex items-center gap-2">
+          .map((item, i) => (
+            <li key={i} className="flex items-center gap-2">
               <svg
                 className="w-5 h-5 text-green-600 flex-shrink-0"
                 fill="none"
