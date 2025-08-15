@@ -1,8 +1,6 @@
 import { useTranslation } from 'react-i18next';
-interface ReviewItem {
-    message: string,
-    customer: string,
-}
+import { ReviewItem } from '../interfaces/interfaces';
+
 
 
 export default function CustomerReviewsItem({message, customer} : ReviewItem) {

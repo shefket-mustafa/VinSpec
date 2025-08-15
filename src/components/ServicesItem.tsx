@@ -1,16 +1,9 @@
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router';
 import { useTranslation } from "react-i18next";
+import { ServicesItemInterface } from '../interfaces/interfaces';
 
-interface ServicesItemInterface {
-  mvs: string;
-  pricePerReport: string;
-  yourPay: string;
-  noDiscountPay: string;
-  discount: string;
-  checked: boolean;
-  onSelect: () => void;
-}
+
 
 export default function ServicesItem({
   mvs,
