@@ -5,7 +5,7 @@ import InfoCard from "../components/InfoCard";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../redux/store/store";
-import { fetchVinData, selectVinData, selectVinStatus } from "../redux/slices/vinSlice";
+import {  fetchVinData, selectVinData, selectVinStatus } from "../redux/slices/vinSlice";
 
 export default function VinCheck() {
   const { vinUrl } = useParams();
@@ -26,12 +26,12 @@ export default function VinCheck() {
   },[navigate]); 
 
 
-  useEffect(() => {
+
+  useEffect(() => { 
     if(!cleanedVin) return;
+    
     dispatch(fetchVinData(cleanedVin));
-    // return () => {
-    //   promise.abort()
-    // }
+
   },[cleanedVin, dispatch]);
    
   useEffect(() => {

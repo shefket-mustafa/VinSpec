@@ -31,3 +31,7 @@ export interface ServicesItemInterface {
     status: "idle" | "loading" | "succeeded" | "failed",
     error: string | null
   }
+
+  export interface VinStateWithReq extends VinState {
+    currentRequestId?: string;
+  }
